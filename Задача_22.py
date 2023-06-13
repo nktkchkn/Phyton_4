@@ -6,3 +6,25 @@
 # множества. m — кол-во элементов второго множества. Затем 
 # пользователь вводит сами элементы множеств.
 
+# n1 = int(input('Введите количество элементов первого набора чисел: '))
+# n2 = int(input('Введите количество элементов второго набора чисел: '))
+# arr1 = []
+# arr2 = []
+# for i in range(n1):
+#     arr1.append(int(input('Введите элемент первого массива: ')))
+# for j in range(n2):
+#     arr2.append(int(input('Введите элемент второго массива: ')))
+# arr3 = []
+# for i in arr1:
+#     if i in arr2 and i not in arr3:
+#             arr3.append(i)
+# arr3.sort()
+# print(arr3)
+
+from random import randint
+n_set = set(randint(1, 9) for i in range(int(input('Введите кол-во элементов первого множества: '))))
+print(n_set)
+m_set = set(randint(1, 9) for i in range(int(input('Введите кол-во элементов второго множества: '))))
+print(m_set)
+s_set = sorted(n_set.intersection(m_set))
+print(*s_set)
